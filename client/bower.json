@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "authors": [
+    "jsmilenium <jsmilenium2003@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "index",
+  "private": false
+}

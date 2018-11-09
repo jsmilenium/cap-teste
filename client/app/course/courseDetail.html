@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="app/course/courseDetail.css">
+    <md-toolbar>
+        <div class="md-toolbar-tools toolbar">
+                <md-button ng-click="goBack()"><md-icon>arrow_back</md-icon></md-button>
+        </div>
+    </md-toolbar>
+    <div layout-xs="column" class="content" layout-align="center">
+        <md-card class="card" flex="50">
+            <md-card-header>
+                <md-card-header-text>
+                    <p><span class="md-headline">{{course.title}}</span></p>
+                    <p><span class="md-subhead">{{course.description}}</span></p>
+                </md-card-header-text>
+            </md-card-header>
+
+            <md-card-content>
+                <p><span class="md-subhead"><md-icon>calendar_today</md-icon>{{course.start | date:"dd/MM/yyyy"}}</span></p>
+                <p><span class="md-subhead"><md-icon>access_time</md-icon>{{course.start | date:"H:mm"}}</span></p>
+                <p><span class="md-subhead"><md-icon>location_on</md-icon>{{course.address.street}}</span></p>
+                <p><span class="md-subhead"><md-icon>attach_money</md-icon>{{course.price}}</span></p>
+                <p><span class="md-subhead"><md-icon>chevron_right</md-icon>{{course.category.name}}</span></p>
+                <p><span class="md-subhead"><img class="avatar" src="{{course.consultant.avatar}}">{{course.consultant.name}}</span></p>
+            </md-card-content>
+            
+            <md-card-footer>
+                    <div layout="row" layout-align="center">
+                        <md-button class="md-raised md-warn md-button button">INSCRIÇÃO</md-button>
+                    </div>
+                </md-card-footer>
+        </md-card>
+    </div>

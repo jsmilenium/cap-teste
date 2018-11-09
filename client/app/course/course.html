@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="app/course/course.css">
+<md-content>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+
+            <h2>{{title}}</h2>
+            <span flex></span>
+
+            <md-input-container class="search-bar">
+                <md-icon>search</md-icon><input id="search-input" type="text" ng-model="search.title" placeholder="Pesquisar" />
+            </md-input-container>
+
+        </div>
+    </md-toolbar>
+    <div layout="row" layout-xs="column" class="content" layout-align="center">
+        <div ng-repeat="course in courses | filter:search:strict">
+            <md-card class="card" class="card" ng-click="courseDetailCard(course.id)">
+                <md-card-header>
+                    <md-card-header-text>
+                        <span class="md-subhead">{{course.category.name}}</span><br>
+                        <span class="md-headline">{{course.title}}</span>
+                        <span class="md-subhead">{{course.address.city}}</span>
+                    </md-card-header-text>
+                </md-card-header>
+                
+                <md-card-content>
+                </md-card-content>
+                
+                <md-card-footer>
+                    <div layout="row" layout-align="left center">
+                        <span class="md-subhead">{{course.start | date:"dd/MM/yyyy"}}</span><md-icon class="material-icons">calendar_today</md-icon>
+                    </div>
+                </md-card-footer>
+            </md-card>
+        </div>
+    </div>
+</md-content>

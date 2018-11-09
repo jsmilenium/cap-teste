@@ -1,0 +1,29 @@
+body {
+    background: #999;
+}
+
+.content{
+    position:absolute;
+    margin-left:500px;
+    margin-top:-87px;
+    z-index:999;
+    width: 100%;
+}
+
+.material-icons {
+    margin-left: 0;
+ }
+
+ .avatar{
+     width: 40px;
+     border-radius: 50%;
+ }
+
+ .button{
+     width: 150px;
+     margin-top: -19px;
+ }
+
+ .toolbar{
+     padding: 70px;
+ }
